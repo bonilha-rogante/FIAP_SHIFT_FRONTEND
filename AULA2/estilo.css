@@ -1,0 +1,32 @@
+/* RESET BÁSICO */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: white;
+}
+
+#t1 {
+    color: orange;
+    background: black;
+    font-size: 40px;
+}
+
+#t2 {
+    color: white;
+    background: blue;
+}
+
+#t3 {
+    color: yellow;
+    background: pink;
+}
+
+.titulo {
+    color: white;
+    background: purple;
+}
