@@ -11,6 +11,7 @@
 
     <!-- ADICIONANDO ICONE NO TITULO DA PÁGINA -->
      <link rel="shurtcut icon" href="./img/icone.png"/>
+     <link rel="stylesheet" href="style.css">
     <!-- TITULO DA PÁGINA -->
     <title>Escola Dev</title>
     <!-- FINAL DO CABEÇALHO -->
@@ -19,30 +20,30 @@
 <body>
 
     <!-- TIPOS DE TITULOS DO CORPO DA PÁGINA -->
-     <h1>ESCOLA DE DESENVOLVEDORES</h1>
-     <h2>Seja Bem-Vindo a nossa Escola</h2>
-     <h3>Desenvolvedor Nível 1</h3>
-     <h4>Desenvolvedor Nível 2</h4>
-     <h5>Desenvolvedor Nível 3</h5>
-     <h6>Desenvolvedor Nível 4</h6>
+     <h1 id="titulo">ESCOLA DE DESENVOLVEDORES</h1>
+     <h2 class="subtit">Seja Bem-Vindo a nossa Escola</h2>
+     <h3 class="subtit">Desenvolvedor Nível 1</h3>
+     <h4 class="subtit">Desenvolvedor Nível 2</h4>
+     <h5 class="subtit">Desenvolvedor Nível 3</h5>
+     <h6 class="subtit">Desenvolvedor Nível 4</h6>
      
      <hr>
 
      <!-- PARAGRAFOS DE TEXTOS -->
-     <p>Conteúdo da primeira semana Dev</p>
-     <p>Conteúdo da segunda semana Dev</p>
-     <p>Conteúdo da terceira semana Dev</p>
+     <p class="p1">Conteúdo da primeira semana Dev</p>
+     <p class="p1">Conteúdo da segunda semana Dev</p>
+     <p class="p1">Conteúdo da terceira semana Dev</p>
      
      <!-- LINHA DIVISORIA -->
      <hr>
 
-     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus tempore autem iure animi, accusantium rerum neque aliquam ab exercitationem explicabo, eveniet nam ratione! Voluptatibus pariatur saepe nam? Libero, illo dolorum?</p>
+     <p class="ptext">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus tempore autem iure animi, accusantium rerum neque aliquam ab exercitationem explicabo, eveniet nam ratione! Voluptatibus pariatur saepe nam? Libero, illo dolorum?</p>
 
      <hr>
 
     <!-- TRATAMENTO DE IMAGENS -->
 
-    <img src="./img/imagem1.jpg" alt="Imagem Escola" title="Escola" width="600"/>
+    <img src="./img/imagem1.jpg" alt="Imagem Escola" title="Escola" width="600" id="img1"/>
 
     <hr>
 
@@ -97,14 +98,14 @@
        <hr>
 
        <!-- FORMULARIOS -->
-       <h2>Login Aluno</h2>
-       <form action="dados.html">
+       <h2 id="titform">Login Aluno</h2>
+       <form action="dados.html" class="form1">
             <input type="text" placeholder="Digite seu usuário" />
             <input type="password" placeholder="Digite sua senha"/>
-            <button type="submit">Acessar</button>
+            <button type="submit" id="btnform1">Acessar</button>
        </form>
        <hr>
-       <form>
+       <form class="form2">
         <fieldset>
             <legend>Tipos de Inputs</legend>
             
@@ -146,7 +147,7 @@
 
     <h4>Lista de Alunos</h4>
 
-    <table border="1">
+    <table id="table1">
         <tr>
             <td>Nome</td>
             <td>Idade</td>
@@ -161,7 +162,7 @@
 
     <!-- TABELA PERSONALIZADA -->
 
-    <table border="1">
+    <table id="table2">
         <thead>
             <tr>
                 <th>Nome</th>
