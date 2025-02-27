@@ -62,3 +62,24 @@ console.log(exemplo9)
 let exemplo10 = null
 console.log(exemplo10)
 
+// OPERADORES ARITMÉTICOS
+const a=20;
+const b=10;
+
+console.log(a + b);
+console.log(a - b);
+console.log(a * b);
+console.log(a / b);
+
+// OPERADORES LÓGICOS
+console.log(a < b);
+console.log(a < b && b < 5);
+console.log(a < b || b > a);
+console.log(a > b);
+console.log(a >= b);
+console.log(a <= b);
+
+// OPERADORES DE COMPARAÇÃO
+console.log(a == b);
+console.log(a != b);
+console.log(a === b);
