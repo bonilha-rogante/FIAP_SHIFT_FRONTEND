@@ -83,3 +83,63 @@ console.log(a <= b);
 console.log(a == b);
 console.log(a != b);
 console.log(a === b);
+
+
+// ESTRUTURA CONDICIONAL
+
+// if
+if(true) {
+    console.log("Verdadeiro")
+}
+
+// if else
+let nome1="Fiap";
+
+if(nome1 == 'Fiap'){
+    console.log("Nome correto")
+}else {
+    console.log("Nome incorreto!")
+}
+
+// Ternário
+let  valor2 = 100;
+let resultado = valor2 == 1000 ? "Certo":"Errado"
+console.log(resultado)
+
+// SWITCH
+let time = "";
+
+switch(time){
+    case "Corinthians":
+        console.log("Melhor Time")
+        break;
+    case "São Paulo":
+        console.log("Não considero o melhor time")
+    case "Palmeiras":
+        console.log("Não possui mundial")
+        break;
+    default:
+        console.log("Nenhuma das opções")
+}
+
+// Estrutura de Repetição
+// FOR
+for(let i=0; i<=10;i++){
+    console.log(i)
+}
+
+// WHILE
+let c = 0
+
+while(c <= 10){
+    console.log(c)
+    c++
+}
+
+// DO WHILE
+let z = 0;
+
+do{
+    console.log("do while", z)
+    z++
+} while(z<=10)
