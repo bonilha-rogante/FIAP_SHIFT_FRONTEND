@@ -143,3 +143,13 @@ do{
     console.log("do while", z)
     z++
 } while(z<=10)
+
+//jogo advinhação
+
+let palpite;
+const sorteio = Math.floor(Math.random() * 10) + 1;
+do {
+    palpite = parseInt(prompt("Escolha um número entre 1 e 10"));
+} while(palpite !== sorteio);
+
+alert(`Parabéns! Você acertou o número: ${palpite}`)
