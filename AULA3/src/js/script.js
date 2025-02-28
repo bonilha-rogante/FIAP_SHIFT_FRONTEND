@@ -144,12 +144,35 @@ do{
     z++
 } while(z<=10)
 
-//jogo advinhação
+//jogo adivinhação
 
-let palpite;
-const sorteio = Math.floor(Math.random() * 10) + 1;
-do {
-    palpite = parseInt(prompt("Escolha um número entre 1 e 10"));
-} while(palpite !== sorteio);
+// let palpite;
+// const sorteio = Math.floor(Math.random() * 10) + 1;
+// do {
+//     palpite = parseInt(prompt("Escolha um número entre 1 e 10"));
+// } while(palpite !== sorteio);
 
-alert(`Parabéns! Você acertou o número: ${palpite}`)
+// alert(`Parabéns! Você acertou o número: ${palpite}`)
+
+// FUNÇÕES
+function saudacao(nome) {
+    // alert(`Seja bem vindo, ${nome}`)
+    console.log(`Seja bem vindo, ${nome}`)
+    // alert(`Seja bem vindo, ${nome}`)
+}
+
+saudacao('Fiap')
+
+function semaforo(){
+    let semaforo="Amarelo"
+    console.log(`O Semaforo está ${semaforo}`)
+}
+
+semaforo()
+
+// ARROW FUNCTION
+const saudacao1 = (nome) => console.log(`Olá, mundo, ${nome}!`)
+
+saudacao1("Cidade")
+
+// Método Filter
