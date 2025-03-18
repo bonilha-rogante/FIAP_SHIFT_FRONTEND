@@ -176,3 +176,57 @@ const saudacao1 = (nome) => console.log(`Olá, mundo, ${nome}!`)
 saudacao1("Cidade")
 
 // Método Filter
+const num = [1, 2, 3, 4, 5, 6]
+const numPares = num.filter(numero=>numero % 2 == 0)
+console.log(numPares)
+
+const herois = ["Thanos", "Homem de Ferro", "Viúva Negra", "Thor", "Capitão América"]
+const nomesGrandes = herois.filter(heroi => heroi.length > 5)
+console.log(nomesGrandes)
+
+//Método Map
+let num2 =[1, 2, 3, 4, 5]
+
+const dobro = num2.map(numero => numero * 2)
+console.log(dobro)
+
+const herois1 = [
+    {nome:"Thor", arma:"martelo"},
+    {nome:"Capitão América", arma:"Escudo"},
+    {nome:"Arqueiro", arma:"Flechas"}
+]
+
+const heroi = herois1.map(heroi=>heroi.arma);
+console.log(heroi)
+
+// // Método Reduce
+const num3 = [10,20,30,40,50]
+
+const result = num3.reduce((acumulador, valorAtual) =>{
+    return acumulador + valorAtual;
+}, 0)
+
+console.log(result)
+
+const herois2 = ["Thanos", "Homem de Ferro", "Thanos", "Viúva Negra", "Thor", "Capitão América", "Viúva Negra", "Homem de Ferro",]
+
+const quantidade = herois2.reduce((contador, heroi) => {
+    contador[heroi] = (contador[heroi] || 0) +1;
+    return contador;
+}, {})
+
+console.log(quantidade)
+
+
+
+const produtos = [
+    {nome: "Boneco Thor", preco:450},
+    {nome: "Boneco Hulk", preco:400},
+    {nome: "Boneco Viúva Negra", preco:300},
+    {nome: "Boneco Visão", preco:200},
+    {nome: "Boneco Homem de Ferro", preco:500}
+]
+
+const valorCupomDesconto = produtos.filter((produto) => produto.preco > 300).map((produto)=>({...produto, preco: produto.preco * 0.9})).reduce((acumulador, produto)=> acumulador + produto.preco, 0)
+
+console.log(`O valor dos pordutos acima de R$ 300 com 10% de deconto R$ ${valorCupomDesconto}`)
