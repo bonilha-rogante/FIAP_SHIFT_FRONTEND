@@ -4,7 +4,7 @@ import axios from 'axios'
 const Produtos = () => {
     
     //DECLARANDO A CHAMADA API (endpoint)
-    const  API_URL = 'http://localhost:5000/produtos';
+    const API_URL = 'http://localhost:5000/produtos';
 
     //HOOK - useState - Manipula o estado da variável
     const [produtos, setProdutos] = useState([]);
@@ -84,12 +84,13 @@ const Produtos = () => {
 
 
   return (
-    <div>
-      <h1>Sistema de Cadastro de Produtos</h1>
-      <form action="">
-        <div>
-            <label>Nome</label>
-            <input 
+    <div className="container mx-auto p-4">
+      <h1 className="text-2xl font-bold mb-4 flex justify-center text-blue-900">Sistema de Cadastro de Produtos</h1>
+      <form className="mb-4">
+        <div className="mb-2">
+            <label htmlFor="nome" className="block text-sm font-bold text-blue-900">Nome</label>
+            <input
+                className="mt-1 p-2 border rounded-2xl w-full" 
                 type="text" 
                 id="nome" 
                 placeholder="Digite o nome do produto" 
@@ -98,9 +99,10 @@ const Produtos = () => {
             />
         </div>
 
-        <div>
-            <label>Descrição</label>
+        <div className="mb-2">
+            <label htmlFor="descricao" className="block text-sm font-bold text-blue-900">Descrição</label>
             <input 
+                className="mt-1 p-2 border rounded-2xl w-full"
                 type="text" 
                 id="descricao" 
                 placeholder="Descrição do produto" 
@@ -108,21 +110,21 @@ const Produtos = () => {
                 onChange={(e)=>setNovoProduto({...novoProduto, descricao: e.target.value})}
             />
         </div>
-        <button onClick={handleSubmit}>
+        <button className="bg-amber-500 hover:bg-amber-300 text-black font-extrabold py-2 px-4 rounded-2xl" onClick={handleSubmit}>
             {editar ? 'Alterar':'Cadastrar'}
-            Cadastrar
         </button>
       </form>
 
       <ul>
         {produtos.map((produto)=>(
-            <li key={produto.id}>
+            <li key={produto.id} className="border p-2 mb-2 rounded-2xl flex items-center justify-between">
                 <div>
-                    <strong>{produto.nome}</strong>{produto.descricao}
+                    <strong className="font-semibold"> {produto.nome}</strong>{produto.descricao}
                 </div>
                 <div>
-                    <button onClick={()=>handleEditar(produto)}>Editar</button>
-                    <button onClick={()=>apagarProduto(produto.id)}>Apagar</button>
+                    <button className="bg-blue-600 hover:bg-blue-300 text-black font-bold py-1 px-4 rounded-2xl mr-2" onClick={()=>handleEditar(produto)}>Editar</button>
+
+                    <button className="bg-red-500 hover:bg-red-300 text-black font-bold py-1 px-2 rounded-2xl" onClick={()=>apagarProduto(produto.id)}>Apagar</button>
                 </div>
             </li>
         ))}
